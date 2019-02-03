@@ -40,7 +40,9 @@ class CollectionGenServiceProvider extends ServiceProvider
             ], 'lang');*/
 
             // Registering package commands.
-            // $this->commands([]);
+             $this->commands([
+                 'collectiongen'
+             ]);
         }
     }
 
