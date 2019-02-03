@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Collections;
+
+class DummyCollection implements \countable, IteratorAggregator
+{
+    private $collectionInstance;
+
+    private function __construct(){
+        $collectionInstance = [];
+    }
+
+    public static function createEmpty() : void
+    {
+        return new self;
+    }
+}
