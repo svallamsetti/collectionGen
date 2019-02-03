@@ -41,7 +41,7 @@ class CollectionGenServiceProvider extends ServiceProvider
 
             // Registering package commands.
              $this->commands([
-                 'collectiongen'
+                 CollectionGen::class
              ]);
         }
     }
