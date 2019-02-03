@@ -1,0 +1,54 @@
+{
+    "name": "svallamsetti/collectiongen",
+    "description": "Collection Scafolder",
+    "keywords": [
+        "svallamsetti",
+        "collectiongen"
+    ],
+    "homepage": "https://github.com/svallamsetti/collectiongen",
+    "license": "MIT License (MIT)",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sai Dinesh",
+            "email": "vallamsettisaidinesh@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.7.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Svallamsetti\\CollectionGen\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Svallamsetti\\CollectionGen\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Svallamsetti\\CollectionGen\\CollectionGenServiceProvider"
+            ],
+            "aliases": {
+                "CollectionGen": "Svallamsetti\\CollectionGen\\CollectionGenFacade"
+            }
+        }
+    }
+}
